@@ -2,6 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://asap-programmer.github.io/static-site-pages/</loc>
-         <lastmod>2025-09-17</lastmod>
+         <lastmod>2025-09-27</lastmod>
+    </url>
+    <url>
+         <loc>https://asap-programmer.github.io/static-site-pages/development/</loc>
+         <lastmod>2025-09-27</lastmod>
+    </url>
+    <url>
+         <loc>https://asap-programmer.github.io/static-site-pages/features/</loc>
+         <lastmod>2025-09-27</lastmod>
     </url>
 </urlset>

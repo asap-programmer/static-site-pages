@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A modern static site built with MkDocs and custom React theme">
+    <meta name="author" content="Ilvir Nizaev">
+    <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-">
+
+    <title>Development - My Docs</title>
+
+    <link rel="canonical" href="https://asap-programmer.github.io/static-site-pages/development/">
+    <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48dGV4dCB5PSIuOWVtIiBmb250LXNpemU9IjkwIj7wn5K0PC90ZXh0Pjwvc3ZnPg==">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../assets/css/custom.css">
+
+    
+<style>
+    .hero-gradient {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    }
+    .feature-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    }
+</style>
+
+</head>
+
+<body class="bg-gray-50 text-gray-900">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <a href=".." class="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
+                        My Docs
+                    </a>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    
+                        <a href=".."
+                           class="text-gray-600 hover:text-blue-600 transition-colors font-medium
+                                  ">
+                            Home
+                        </a>
+                    
+                        <a href="../features/"
+                           class="text-gray-600 hover:text-blue-600 transition-colors font-medium
+                                  ">
+                            Features
+                        </a>
+                    
+                        <a href="./"
+                           class="text-gray-600 hover:text-blue-600 transition-colors font-medium
+                                  text-blue-600">
+                            Development
+                        </a>
+                    
+                </nav>
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-gray-600 hover:text-blue-600">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                
+                    <a href=".."
+                       class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors
+                              ">
+                        Home
+                    </a>
+                
+                    <a href="../features/"
+                       class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors
+                              ">
+                        Features
+                    </a>
+                
+                    <a href="./"
+                       class="block px-3 py-2 text-gray-600 hover:text-blue-600 transition-colors
+                              text-blue-600 bg-blue-50">
+                        Development
+                    </a>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar -->
+            <aside class="lg:w-64 flex-shrink-0">
+                <div class="bg-white rounded-lg shadow-sm p-6 sticky top-8">
+                    <h3 class="text-lg font-semibold text-gray-900 mb-4">Contents</h3>
+                    <nav class="space-y-2">
+                        
+                            <a href="#development-guide"
+                               class="block text-sm text-gray-600 hover:text-blue-600 transition-colors
+                                      text-blue-600 font-medium">
+                                Development Guide
+                            </a>
+                        
+                    </nav>
+                </div>
+            </aside>
+
+            <!-- Content -->
+            <article class="flex-1 min-w-0">
+                
+<!-- Hero Section -->
+<section class="hero-gradient text-white py-20 mb-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold mb-6">
+            Welcome to My Docs
+        </h1>
+        <p class="text-xl md:text-2xl mb-8 text-blue-100">
+            A modern static site built with MkDocs and custom React theme
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#hero-features"
+               class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Get Started
+            </a>
+            <a href="#hero-features"
+               class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                Learn More
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section id="hero-features" class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Key Features</h2>
+            <p class="text-xl text-gray-600">Modern technology stack for optimal performance</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="feature-card bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Lightning Fast</h3>
+                <p class="text-gray-600">Built with modern static site generation for optimal performance and SEO.</p>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Responsive Design</h3>
+                <p class="text-gray-600">Fully responsive design that works perfectly on all devices and screen sizes.</p>
+            </div>
+
+            <div class="feature-card bg-white p-8 rounded-lg shadow-sm border border-gray-200">
+                <div class="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mb-6">
+                    <svg class="w-6 h-6 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-4">Modern Stack</h3>
+                <p class="text-gray-600">Built with React, Tailwind CSS, and MkDocs for a modern development experience.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="bg-white rounded-lg shadow-sm p-8">
+            
+                <h1 class="text-3xl font-bold text-gray-900 mb-6">Development</h1>
+            
+
+            <div class="prose prose-lg max-w-none">
+                <h1 id="development-guide">Development Guide<a class="headerlink" href="#development-guide" title="Permanent link">&para;</a></h1>
+<p>This guide covers the development process, build system, and deployment pipeline for the MkDocs React theme.</p>
+<h2 id="development-setup">🛠️ Development Setup<a class="headerlink" href="#development-setup" title="Permanent link">&para;</a></h2>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Before starting development, ensure you have the following installed:</p>
+<ul>
+<li><strong>Python 3.11+</strong>: Required for MkDocs</li>
+<li><strong>Node.js 18+</strong>: Required for frontend build tools</li>
+<li><strong>Git</strong>: Version control</li>
+<li><strong>Code Editor</strong>: VS Code, WebStorm, or similar</li>
+</ul>
+<h3 id="environment-setup">Environment Setup<a class="headerlink" href="#environment-setup" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong>:
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/asap-programmer/static-site-python.git
+<span class="nb">cd</span><span class="w"> </span>static-site-python
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Create a virtual environment</strong>:
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>venv
+<span class="nb">source</span><span class="w"> </span>venv/bin/activate<span class="w">  </span><span class="c1"># On Windows: venv\Scripts\activate</span>
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Install Python dependencies</strong>:
+<div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Install Node.js dependencies</strong>:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>install
+</code></pre></div></p>
+</li>
+</ol>
+<h2 id="build-system">🏗️ Build System<a class="headerlink" href="#build-system" title="Permanent link">&para;</a></h2>
+<h3 id="mkdocs-configuration">MkDocs Configuration<a class="headerlink" href="#mkdocs-configuration" title="Permanent link">&para;</a></h3>
+<p>The site is configured through <code>mkdocs.yml</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="nt">site_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">My Docs</span>
+<span class="nt">site_url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://asap-programmer.github.io/static-site-pages</span>
+<span class="nt">site_description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">A modern static site built with MkDocs and custom React theme</span>
+<span class="nt">site_author</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Ilvir Nizaev</span>
+
+<span class="nt">theme</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">null</span>
+<span class="w">  </span><span class="nt">custom_dir</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">custom_theme</span>
+<span class="w">  </span><span class="nt">static_templates</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">404.html</span>
+
+<span class="nt">plugins</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">search</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">minify</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">minify_html</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">minify_js</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">      </span><span class="nt">minify_css</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+
+<span class="nt">markdown_extensions</span><span class="p">:</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">toc</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">permalink</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">codehilite</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">guess_lang</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pymdownx.superfences</span>
+<span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">pymdownx.tabbed</span><span class="p">:</span>
+<span class="w">      </span><span class="nt">alternate_style</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+</code></pre></div>
+<h3 id="postcss-configuration">PostCSS Configuration<a class="headerlink" href="#postcss-configuration" title="Permanent link">&para;</a></h3>
+<p>CSS processing is handled by PostCSS with the following configuration:</p>
+<div class="highlight"><pre><span></span><code><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">plugins</span><span class="o">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;autoprefixer&#39;</span><span class="p">),</span>
+<span class="w">    </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;cssnano&#39;</span><span class="p">)({</span>
+<span class="w">      </span><span class="nx">preset</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;default&#39;</span><span class="p">,</span>
+<span class="w">    </span><span class="p">}),</span>
+<span class="w">  </span><span class="p">],</span>
+<span class="p">};</span>
+</code></pre></div>
+<h3 id="build-commands">Build Commands<a class="headerlink" href="#build-commands" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>mkdocs serve</code></td>
+<td>Start development server</td>
+</tr>
+<tr>
+<td><code>mkdocs build</code></td>
+<td>Build static site</td>
+</tr>
+<tr>
+<td><code>npm run build:css</code></td>
+<td>Process CSS with PostCSS</td>
+</tr>
+<tr>
+<td><code>npm run watch:css</code></td>
+<td>Watch CSS files for changes</td>
+</tr>
+</tbody>
+</table>
+<h2 id="theme-development">🎨 Theme Development<a class="headerlink" href="#theme-development" title="Permanent link">&para;</a></h2>
+<h3 id="theme-structure">Theme Structure<a class="headerlink" href="#theme-structure" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>custom_theme/
+├── base.html              # Base template
+├── main.html              # Main page template
+├── 404.html               # Error page template
+└── assets/
+    ├── css/
+    │   ├── custom.css     # Custom styles
+    │   └── custom.min.css # Minified styles
+    └── js/
+        └── custom.js      # Custom JavaScript
+</code></pre></div>
+<h3 id="template-development">Template Development<a class="headerlink" href="#template-development" title="Permanent link">&para;</a></h3>
+<h4 id="base-template-basehtml">Base Template (<code>base.html</code>)<a class="headerlink" href="#base-template-basehtml" title="Permanent link">&para;</a></h4>
+<p>The base template provides the overall page structure:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;{{ lang or &#39;en&#39; }}&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;viewport&quot;</span> <span class="na">content</span><span class="o">=</span><span class="s">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Additional head content --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Header --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Main content --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">main</span><span class="p">&gt;</span>
+        {% block content %}{% endblock %}
+    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Footer --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">footer</span><span class="p">&gt;</span>...<span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+
+    <span class="cm">&lt;!-- Scripts --&gt;</span>
+    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;{{ &#39;assets/js/custom.js&#39;|url }}&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<h4 id="main-page-template-mainhtml">Main Page Template (<code>main.html</code>)<a class="headerlink" href="#main-page-template-mainhtml" title="Permanent link">&para;</a></h4>
+<p>The main page template extends the base template with additional features:</p>
+<div class="highlight"><pre><span></span><code>{% extends &quot;base.html&quot; %}
+
+{% block extrahead %}
+<span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+<span class="w">    </span><span class="p">.</span><span class="nc">hero-gradient</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">background</span><span class="p">:</span><span class="w"> </span><span class="nb">linear-gradient</span><span class="p">(</span><span class="mi">135</span><span class="kt">deg</span><span class="p">,</span><span class="w"> </span><span class="mh">#667eea</span><span class="w"> </span><span class="mi">0</span><span class="kt">%</span><span class="p">,</span><span class="w"> </span><span class="mh">#764ba2</span><span class="w"> </span><span class="mi">100</span><span class="kt">%</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+{% endblock %}
+
+{% block content %}
+<span class="cm">&lt;!-- Hero Section --&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;hero-gradient text-white py-20 mb-16&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Hero content --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Features Section --&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;dev-features&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-16&quot;</span><span class="p">&gt;</span>
+    <span class="cm">&lt;!-- Features content --&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+<span class="cm">&lt;!-- Content Section --&gt;</span>
+<span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;py-16 bg-gray-50&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bg-white rounded-lg shadow-sm p-8&quot;</span><span class="p">&gt;</span>
+        {{ super() }}
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+{% endblock %}
+</code></pre></div>
+<h3 id="css-development">CSS Development<a class="headerlink" href="#css-development" title="Permanent link">&para;</a></h3>
+<h4 id="custom-css-customcss">Custom CSS (<code>custom.css</code>)<a class="headerlink" href="#custom-css-customcss" title="Permanent link">&para;</a></h4>
+<p>The custom CSS file includes:</p>
+<ul>
+<li><strong>Typography improvements</strong>: Enhanced readability</li>
+<li><strong>Component styles</strong>: Custom component styling</li>
+<li><strong>Animations</strong>: Smooth transitions and effects</li>
+<li><strong>Responsive design</strong>: Mobile-first approach</li>
+<li><strong>Print styles</strong>: Optimized printing</li>
+</ul>
+<h4 id="postcss-processing">PostCSS Processing<a class="headerlink" href="#postcss-processing" title="Permanent link">&para;</a></h4>
+<p>CSS is processed through PostCSS with:</p>
+<ul>
+<li><strong>Autoprefixer</strong>: Automatic vendor prefixes</li>
+<li><strong>CSSnano</strong>: CSS minification</li>
+<li><strong>Custom plugins</strong>: Additional processing</li>
+</ul>
+<h3 id="javascript-development">JavaScript Development<a class="headerlink" href="#javascript-development" title="Permanent link">&para;</a></h3>
+<h4 id="react-components">React Components<a class="headerlink" href="#react-components" title="Permanent link">&para;</a></h4>
+<p>The theme includes several React components:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Theme Toggle Component</span>
+<span class="kd">function</span><span class="w"> </span><span class="nx">ThemeToggle</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">[</span><span class="nx">isDark</span><span class="p">,</span><span class="w"> </span><span class="nx">setIsDark</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">useState</span><span class="p">(</span><span class="kc">false</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">toggleTheme</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">setIsDark</span><span class="p">(</span><span class="o">!</span><span class="nx">isDark</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="nx">isDark</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">add</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="nb">document</span><span class="p">.</span><span class="nx">documentElement</span><span class="p">.</span><span class="nx">classList</span><span class="p">.</span><span class="nx">remove</span><span class="p">(</span><span class="s1">&#39;dark&#39;</span><span class="p">);</span>
+<span class="w">            </span><span class="nx">localStorage</span><span class="p">.</span><span class="nx">setItem</span><span class="p">(</span><span class="s1">&#39;theme&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;light&#39;</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">};</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">React</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;button&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">onClick</span><span class="o">:</span><span class="w"> </span><span class="nx">toggleTheme</span><span class="p">,</span>
+<span class="w">        </span><span class="nx">className</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;p-2 rounded-lg bg-gray-200 hover:bg-gray-300 transition-colors&#39;</span><span class="p">,</span>
+<span class="w">        </span><span class="s1">&#39;aria-label&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Toggle theme&#39;</span>
+<span class="w">    </span><span class="p">},</span><span class="w"> </span><span class="nx">isDark</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="s1">&#39;☀️&#39;</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;🌙&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="interactive-features">Interactive Features<a class="headerlink" href="#interactive-features" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Mobile menu</strong>: Responsive navigation</li>
+<li><strong>Search functionality</strong>: Real-time search</li>
+<li><strong>Smooth scrolling</strong>: Enhanced navigation</li>
+<li><strong>Code copying</strong>: One-click code copying</li>
+<li><strong>Back to top</strong>: Smooth scroll to top</li>
+</ul>
+<h2 id="development-workflow">🔄 Development Workflow<a class="headerlink" href="#development-workflow" title="Permanent link">&para;</a></h2>
+<h3 id="local-development">Local Development<a class="headerlink" href="#local-development" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Start the development server</strong>:
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>serve
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Open your browser</strong> to <code>http://localhost:8000</code></p>
+</li>
+<li>
+<p><strong>Make changes</strong> to templates, CSS, or JavaScript</p>
+</li>
+<li>
+<p><strong>Refresh the browser</strong> to see changes</p>
+</li>
+</ol>
+<h3 id="css-development_1">CSS Development<a class="headerlink" href="#css-development_1" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Edit CSS files</strong> in <code>custom_theme/assets/css/</code></p>
+</li>
+<li>
+<p><strong>Process with PostCSS</strong>:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>build:css
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Watch for changes</strong>:
+<div class="highlight"><pre><span></span><code>npm<span class="w"> </span>run<span class="w"> </span>watch:css
+</code></pre></div></p>
+</li>
+</ol>
+<h3 id="testing">Testing<a class="headerlink" href="#testing" title="Permanent link">&para;</a></h3>
+<ol>
+<li>
+<p><strong>Build the site</strong>:
+<div class="highlight"><pre><span></span><code>mkdocs<span class="w"> </span>build
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Validate HTML</strong>:
+<div class="highlight"><pre><span></span><code>html5validator<span class="w"> </span>--root<span class="w"> </span>site
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Test responsiveness</strong> using browser dev tools</p>
+</li>
+</ol>
+<h2 id="deployment-pipeline">🚀 Deployment Pipeline<a class="headerlink" href="#deployment-pipeline" title="Permanent link">&para;</a></h2>
+<h3 id="github-actions-workflow">GitHub Actions Workflow<a class="headerlink" href="#github-actions-workflow" title="Permanent link">&para;</a></h3>
+<p>The deployment pipeline includes:</p>
+<ol>
+<li><strong>Testing Phase</strong>:</li>
+<li>HTML validation</li>
+<li>Dependency installation</li>
+<li>
+<p>Build verification</p>
+</li>
+<li>
+<p><strong>Build Phase</strong>:</p>
+</li>
+<li>CSS processing with PostCSS</li>
+<li>Static site generation</li>
+<li>
+<p>Asset minification</p>
+</li>
+<li>
+<p><strong>Deployment Phase</strong>:</p>
+</li>
+<li>GitHub Pages deployment</li>
+<li>CDN integration</li>
+<li>Cache configuration</li>
+</ol>
+<h3 id="workflow-configuration">Workflow Configuration<a class="headerlink" href="#workflow-configuration" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Build and Deploy MkDocs Site</span>
+
+<span class="nt">on</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">push</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+<span class="w">  </span><span class="nt">pull_request</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">branches</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">main</span>
+
+<span class="nt">jobs</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">test</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Checkout source repo</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/checkout@v3</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Set up Python</span>
+<span class="w">        </span><span class="nt">uses</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">actions/setup-python@v4</span>
+<span class="w">        </span><span class="nt">with</span><span class="p">:</span>
+<span class="w">          </span><span class="nt">python-version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3.11&#39;</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Install dependencies</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">python -m pip install --upgrade pip</span>
+<span class="w">          </span><span class="no">pip install -r requirements.txt</span>
+
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Validate HTML</span>
+<span class="w">        </span><span class="nt">run</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span>
+<span class="w">          </span><span class="no">mkdocs build</span>
+<span class="w">          </span><span class="no">pip install html5validator</span>
+<span class="w">          </span><span class="no">html5validator --root site --format text</span>
+
+<span class="w">  </span><span class="nt">build-deploy</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">needs</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">test</span>
+<span class="w">    </span><span class="nt">runs-on</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ubuntu-latest</span>
+<span class="w">    </span><span class="nt">if</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">github.ref == &#39;refs/heads/main&#39;</span>
+
+<span class="w">    </span><span class="nt">steps</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># ... build and deployment steps</span>
+</code></pre></div>
+<h2 id="testing_1">🧪 Testing<a class="headerlink" href="#testing_1" title="Permanent link">&para;</a></h2>
+<h3 id="automated-testing">Automated Testing<a class="headerlink" href="#automated-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>HTML Validation</strong>: W3C HTML validation</li>
+<li><strong>CSS Validation</strong>: CSS linting and validation</li>
+<li><strong>JavaScript Testing</strong>: ESLint and functionality tests</li>
+<li><strong>Performance Testing</strong>: Lighthouse CI integration</li>
+</ul>
+<h3 id="manual-testing">Manual Testing<a class="headerlink" href="#manual-testing" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Cross-browser Testing</strong>: Chrome, Firefox, Safari, Edge</li>
+<li><strong>Device Testing</strong>: Mobile, tablet, desktop</li>
+<li><strong>Accessibility Testing</strong>: Screen reader and keyboard navigation</li>
+</ul>
+<h3 id="testing-commands">Testing Commands<a class="headerlink" href="#testing-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># HTML validation</span>
+html5validator<span class="w"> </span>--root<span class="w"> </span>site
+
+<span class="c1"># CSS validation</span>
+npm<span class="w"> </span>run<span class="w"> </span>lint:css
+
+<span class="c1"># JavaScript testing</span>
+npm<span class="w"> </span>run<span class="w"> </span>test:js
+
+<span class="c1"># Performance testing</span>
+npm<span class="w"> </span>run<span class="w"> </span>lighthouse
+</code></pre></div>
+<h2 id="dependencies">📦 Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<h3 id="python-dependencies">Python Dependencies<a class="headerlink" href="#python-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>mkdocs&gt;=1.5.0
+mkdocs-material&gt;=9.0.0
+mkdocs-minify-plugin&gt;=0.7.0
+pymdown-extensions&gt;=10.0.0
+</code></pre></div>
+<h3 id="nodejs-dependencies">Node.js Dependencies<a class="headerlink" href="#nodejs-dependencies" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;devDependencies&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;autoprefixer&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^10.4.16&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;cssnano&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^6.0.1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;html-minifier-terser&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^7.2.0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;postcss&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^8.4.32&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;postcss-cli&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;^11.0.0&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="configuration">🔧 Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<ul>
+<li><code>PERSONAL_TOKEN</code>: GitHub personal access token for deployment</li>
+<li><code>NODE_ENV</code>: Node.js environment (development/production)</li>
+</ul>
+<h3 id="build-configuration">Build Configuration<a class="headerlink" href="#build-configuration" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Python Version</strong>: 3.11+</li>
+<li><strong>Node.js Version</strong>: 18+</li>
+<li><strong>MkDocs Version</strong>: 1.5.0+</li>
+<li><strong>React Version</strong>: 18.0+</li>
+</ul>
+<h2 id="debugging">🐛 Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<h3 id="common-issues">Common Issues<a class="headerlink" href="#common-issues" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Build Failures</strong>:</li>
+<li>Check Python and Node.js versions</li>
+<li>Verify all dependencies are installed</li>
+<li>
+<p>Check for syntax errors in templates</p>
+</li>
+<li>
+<p><strong>CSS Issues</strong>:</p>
+</li>
+<li>Verify PostCSS configuration</li>
+<li>Check for CSS syntax errors</li>
+<li>
+<p>Ensure Tailwind CSS is loaded</p>
+</li>
+<li>
+<p><strong>JavaScript Issues</strong>:</p>
+</li>
+<li>Check browser console for errors</li>
+<li>Verify React is loaded correctly</li>
+<li>Check for JavaScript syntax errors</li>
+</ol>
+<h3 id="debug-commands">Debug Commands<a class="headerlink" href="#debug-commands" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Debug MkDocs build</span>
+mkdocs<span class="w"> </span>build<span class="w"> </span>--verbose
+
+<span class="c1"># Debug CSS processing</span>
+npx<span class="w"> </span>postcss<span class="w"> </span>custom_theme/assets/css/custom.css<span class="w"> </span>--verbose
+
+<span class="c1"># Debug JavaScript</span>
+node<span class="w"> </span>-c<span class="w"> </span>custom_theme/assets/js/custom.js
+</code></pre></div>
+<h2 id="resources">📚 Resources<a class="headerlink" href="#resources" title="Permanent link">&para;</a></h2>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://www.mkdocs.org/">MkDocs Documentation</a></li>
+<li><a href="https://tailwindcss.com/docs">Tailwind CSS Documentation</a></li>
+<li><a href="https://reactjs.org/docs">React Documentation</a></li>
+<li><a href="https://postcss.org/">PostCSS Documentation</a></li>
+</ul>
+<h3 id="tools">Tools<a class="headerlink" href="#tools" title="Permanent link">&para;</a></h3>
+<ul>
+<li><a href="https://validator.w3.org/">HTML Validator</a></li>
+<li><a href="https://jigsaw.w3.org/css-validator/">CSS Validator</a></li>
+<li><a href="https://developers.google.com/web/tools/lighthouse">Lighthouse</a></li>
+<li><a href="https://www.w3.org/WAI/ER/tools/">Accessibility Testing</a></li>
+</ul>
+<h2 id="contributing">🤝 Contributing<a class="headerlink" href="#contributing" title="Permanent link">&para;</a></h2>
+<h3 id="development-guidelines">Development Guidelines<a class="headerlink" href="#development-guidelines" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Code Style</strong>: Follow existing code patterns</li>
+<li><strong>Testing</strong>: Add tests for new features</li>
+<li><strong>Documentation</strong>: Update documentation for changes</li>
+<li><strong>Performance</strong>: Ensure changes don't impact performance</li>
+</ol>
+<h3 id="pull-request-process">Pull Request Process<a class="headerlink" href="#pull-request-process" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Fork the repository</li>
+<li>Create a feature branch</li>
+<li>Make your changes</li>
+<li>Add tests if applicable</li>
+<li>Update documentation</li>
+<li>Submit a pull request</li>
+</ol>
+<h2 id="support">📞 Support<a class="headerlink" href="#support" title="Permanent link">&para;</a></h2>
+<p>If you encounter issues during development:</p>
+<ol>
+<li>Check the <a href="https://github.com/asap-programmer/static-site-python/issues">Issues</a> page</li>
+<li>Create a new issue with detailed information</li>
+<li>Contact the maintainer via GitHub</li>
+</ol>
+<hr />
+<p><strong>Happy coding! 🚀</strong></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+            </article>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white mt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">My Docs</h3>
+                    <p class="text-gray-400">A modern static site built with MkDocs and custom React theme</p>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        
+                            <li>
+                                <a href=".." class="text-gray-400 hover:text-white transition-colors">
+                                    Home
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="../features/" class="text-gray-400 hover:text-white transition-colors">
+                                    Features
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="./" class="text-gray-400 hover:text-white transition-colors">
+                                    Development
+                                </a>
+                            </li>
+                        
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-md font-semibold mb-4">Contact</h4>
+                    <p class="text-gray-400">Author: Ilvir Nizaev</p>
+                    <p class="text-gray-400">Built with MkDocs & React</p>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 My Docs. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- React and custom JS -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="../assets/js/custom.js"></script>
+
+    
+</body>
+</html>
